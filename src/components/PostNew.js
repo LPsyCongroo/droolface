@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import ImageUploader from 'react-images-upload';
 
 // import StyledInput from '../styled-components/styledinput'
 // import StyledButton from '../styled-components/styledbutton'
@@ -107,13 +106,6 @@ export default class PostNew extends React.Component {
             value={isPrivate}
             onChange={e => this.handlePrivate(e.target.value)}
           /></label>
-          <ImageUploader
-                withIcon={true}
-                buttonText='Choose images'
-                onChange={this.onDrop}
-                imgExtension={['.jpg', '.gif', '.png', '.gif']}
-                maxFileSize={5242880}
-            />
           <button type="submit" onClick={this.handleSubmit}>Submit</button>
         </form>   
       </div>
