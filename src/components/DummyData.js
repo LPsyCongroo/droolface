@@ -14,3 +14,37 @@ export const urls = [
 ];
 
 export const tags = ['foo', 'bar', 'baz', 'chicken', 'sushi', 'dimsum', 'beef', 'kosher', 'vegetarian', 'halal', 'vegan']
+
+export const photoSub = [
+  {
+    title: 'Best Shrimp Evahhh!!!',
+    dietaryRestriction: ['#Pescatarian'],
+    description: 'Shrimp Fried Rice',
+    isHomemade: false,
+    tags: ['#Spicy', '#Flavor', '#mmmmm'],
+    restaurant: 'Sage Tai Restaurant',
+    ingredients: [],
+    isPrivate: false,
+    photo: 'shrimpy.jpg'
+  },
+  {
+    title: 'So Juicy!',
+    dietaryRestriction: ['#BringTheGrease'],
+    description: 'Bacon Cheesburger',
+    isHomemade: true,
+    tags: ['#Ground Beef','#Mushrooms','#Onions','#BBQ Sauce'],
+    restaurant: '',
+    isPrivate: false,
+    photo: 'bareburger.jpg'
+  },
+  {
+    title: 'Taco Tuesday!',
+    dietaryRestriction: ['#Low Carb', '#Gluten Free', '#Keto'],
+    description: 'Bacon Cheesburger',
+    isHomemade: true,
+    tags: ['#Eating Clean','#No Regrets'],
+    restaurant: '',
+    isPrivate: false,
+    photo: 'taco_salad.jpg'
+  }
+]

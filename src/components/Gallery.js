@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import StyledGallery from '../styled-components/StyledGallery';
-
 import { urls } from './DummyData';
 
 export default props => {
