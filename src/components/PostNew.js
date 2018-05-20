@@ -77,24 +77,23 @@ export default class PostNew extends React.Component {
             value={description}
             onChange={e => this.handleDescription(e.target.value)}  
           />
-          <input 
+          <label>Homemade? <input 
             type="checkbox" 
-            placeholder="Homemade?" 
             value={isHomemade}
             onChange={e => this.handleHomemade(e.target.value)}
-          />            
+          /></label>            
           <input 
             type="text" 
             placeholder="restaurant" 
             value={restaurant}
             onChange={e => this.handleRestaurant(e.target.value)}  
           />
-          <input 
+          <label>Private? <input 
             type="checkbox" 
             placeholder="Private" 
             value={isPrivate}
             onChange={e => this.handlePrivate(e.target.value)}
-          />  
+          /></label>
           <button type="submit" onClick={this.handleSubmit}>Submit</button>
         </form>   
       </div>
