@@ -9,8 +9,8 @@ export default () => (
       <input type="text"/>
       <button type="submit">Search</button>
     </form>
-    <Link to="/user/new">Sign Up</Link>
-    <Link to="/post/new">Create Post</Link>
+    <p><Link to="/user/new">Sign Up</Link></p>
+    <p><Link to="/post/new">Create Post</Link></p>
     <Gallery />
   </div>
 )
