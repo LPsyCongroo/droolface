@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import StyledInput from '../styled-components/styledinput'
 
-
 export default class UserNew extends React.Component{
   constructor(props){
     super(props);
@@ -40,6 +39,18 @@ export default class UserNew extends React.Component{
   handleVerification = (verificationNumber) => {
     this.setState({ verificationNumber });
   }
+
+  users = [
+    {
+    username: 'rabbitface',
+    password: 'duckduckgoosegoose',
+    given_name: 'Jane',
+    family_name: 'Smith',
+    email: 'duckgoose@gmail.com',
+    zip_code: '11001',
+    verificationNumber: 123456,
+    }
+  ]
 
   handleRegister = () => {
     const { given_name, family_name, email, username, password, zip_code } = this.state;

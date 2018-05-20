@@ -52,7 +52,39 @@ export default class PostNew extends React.Component {
     
     this.props.history.push('/');
   }
-
+  let photoSub = [
+    {
+      title: 'Best Shrimp Evahhh!!!',
+      dietaryRestriction: ['#Pescatarian'],
+      description: 'Shrimp Fried Rice',
+      isHomemade: false,
+      tags: ['#Spicy', '#Flavor', '#mmmmm']
+      restaurant: 'Sage Tai Restaurant',
+      ingredients: [],
+      isPrivate: false,
+      photo: 'shrimpy.jpg'
+    },
+    {
+      title: 'So Juicy!',
+      dietaryRestriction: ['#BringTheGrease'],
+      description: 'Bacon Cheesburger',
+      isHomemade: true,
+      tags: ['#Ground Beef','#Mushrooms','#Onions','#BBQ Sauce']
+      restaurant: '',
+      isPrivate: false,
+      photo: 'bareburger.jpg'
+    },
+    {
+      title: 'Taco Tuesday!',
+      dietaryRestriction: ['#Low Carb', '#Gluten Free', '#Keto'],
+      description: 'Bacon Cheesburger',
+      isHomemade: true,
+      tags: ['#Eating Clean','#No Regrets']
+      restaurant: '',
+      isPrivate: false,
+      photo: 'bareburger.jpg'
+    }
+  ]
   render(){
     const {title, dietaryRestriction, description, isHomemade, restaurant, isPrivate} = this.state;
     
