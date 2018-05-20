@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import StyledInput from '../styled-components/styledinput'
+// import StyledButton from '../styled-components/styledbutton'
 
 export default class UserNew extends React.Component{
   constructor(props){
