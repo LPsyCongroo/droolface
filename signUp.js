@@ -9,8 +9,8 @@ function signin() {
   const password = document.querySelector('#password').value;
   const given_name = document.querySelector('#given_name').value;
   const family_name = document.querySelector('#family_name').value;
-  const zipCode = document.querySelector('#zipCode').value;
-  register(username, password, email, given_name, family_name, zipCode);
+  const zip_code = document.querySelector('#zip_code').value;
+  register(username, password, email, given_name, family_name, zip_code);
 }
 
 function verification() {
@@ -30,7 +30,7 @@ var poolData = {
   ClientId: '3utdo6191dab6nmt48954adl3i'
 };
 
-function register(username, password, email, given_name, family_name, zipCode) {
+function register(username, password, email, given_name, family_name, zip_code) {
   var userPool = new CognitoUserPool(poolData);
 
   var attributeList = [
@@ -43,8 +43,8 @@ function register(username, password, email, given_name, family_name, zipCode) {
       Value: family_name
     }),
     // new AmazonCognitoIdentity.CognitoUserAttribute({
-    //   Name: 'zipCode',
-    //   Value: zipCode
+    //   Name: 'zip_code',
+    //   Value: zip_code
     // }),
     new AmazonCognitoIdentity.CognitoUserAttribute({
       Name: 'email',

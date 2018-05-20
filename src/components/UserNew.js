@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import StyledInput from '../styled-components/styledinput'
+
 export default class UserNew extends React.Component{
   constructor(props){
     super(props);
@@ -37,6 +39,19 @@ export default class UserNew extends React.Component{
   handleVerification = (verificationNumber) => {
     this.setState({ verificationNumber });
   }
+
+  users = [
+    {
+    username: 'rabbitface',
+    password: 'duckduckgoosegoose',
+    given_name: 'Nitya',
+    family_name: 'Mandyam',
+    email: 'duckgoose@gmail.com',
+    zip_code: '11001',
+    verificationNumber: 123456,
+    profile_pic: 'nitya.jpg'
+    }
+  ]
 
   handleRegister = () => {
     const { given_name, family_name, email, username, password, zip_code } = this.state;
@@ -81,37 +96,37 @@ export default class UserNew extends React.Component{
           this.state.current === 'register' 
             ? (
               <form method="post">
-                <input 
+                <StyledInput  
                   type="text" 
                   placeholder="first name" 
                   value={given_name} 
                   onChange={e => this.handleGiven(e.target.value)}
                 />
-                <input 
+                <StyledInput  
                   type="text" 
                   placeholder="last name" 
                   value={family_name}
                   onChange={e => this.handleFamily(e.target.value)}
                 />
-                <input 
+                <StyledInput  
                   type="email" 
                   placeholder="email" 
                   value={email}
                   onChange={e => this.handleEmail(e.target.value)}
                 />
-                <input 
+                <StyledInput  
                   type="text" 
                   placeholder="username" 
                   value={username}
                   onChange={e => this.handleUsername(e.target.value)}  
                 />
-                <input 
+                <StyledInput  
                   type="password" 
                   placeholder="password" 
                   value={password}
                   onChange={e => this.handlePassword(e.target.value)}
                 />
-                <input 
+                <StyledInput  
                   type="text" 
                   placeholder="zipcode" 
                   value={zip_code}
@@ -122,13 +137,13 @@ export default class UserNew extends React.Component{
             ) 
             : (
               <form method="post">
-                <input 
+                <StyledInput  
                   type="text" 
                   placeholder="username" 
                   value={username}
                   onChange={e => this.handleUsername(e.target.value)}  
                 />
-                <input 
+                <StyledInput  
                   type="text" 
                   placeholder="verification code" 
                   value={verificationNumber}
