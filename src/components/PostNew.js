@@ -3,8 +3,8 @@ import axios from 'axios';
 
 import ImageUploader from 'react-images-upload';
 
-// import StyledInput from '../styled-components/styledinput'
-// import StyledButton from '../styled-components/styledbutton'
+import StyledInput from '../styled-components/styledinput'
+import StyledButton from '../styled-components/styledbutton'
 
 export default class PostNew extends React.Component {
   constructor(props){
@@ -72,41 +72,42 @@ export default class PostNew extends React.Component {
     return (
       <div>
         <form method="post">
-          <input 
+          <StyledInput 
             type="text" 
             placeholder="Title" 
             value={title}
             onChange={e => this.handleTitle(e.target.value)}  
-          />
-          <input 
+          /><br/>
+          <StyledInput 
             type="text" 
             placeholder="Diet" 
             value={dietaryRestriction}
             onChange={e => this.handleDiet(e.target.value)}
-          />            
-          <input 
+          /><br/>       
+          <StyledInput 
             type="text" 
             placeholder="Description" 
             value={description}
             onChange={e => this.handleDescription(e.target.value)}  
-          />
-          <label>Homemade? <input 
+          /><br/>
+          <label>Homemade? <StyledInput 
             type="checkbox" 
             value={isHomemade}
             onChange={e => this.handleHomemade(e.target.value)}
           /></label>            
-          <input 
+          <StyledInput 
             type="text" 
             placeholder="restaurant" 
             value={restaurant}
             onChange={e => this.handleRestaurant(e.target.value)}  
-          />
-          <label>Private? <input 
+          /><br/>
+          <label>Private? <StyledInput 
             type="checkbox" 
             placeholder="Private" 
             value={isPrivate}
             onChange={e => this.handlePrivate(e.target.value)}
           /></label>
+          <p>
           <ImageUploader
                 withIcon={true}
                 buttonText='Choose images'
@@ -114,7 +115,8 @@ export default class PostNew extends React.Component {
                 imgExtension={['.jpg', '.gif', '.png', '.gif']}
                 maxFileSize={5242880}
             />
-          <button type="submit" onClick={this.handleSubmit}>Submit</button>
+            </p>
+          <StyledButton type="submit" onClick={this.handleSubmit}>Submit</StyledButton>
         </form>   
       </div>
     )

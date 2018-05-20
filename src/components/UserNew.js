@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import StyledInput from '../styled-components/styledinput'
-// import StyledButton from '../styled-components/styledbutton'
+import StyledButton from '../styled-components/styledbutton'
 
 export default class UserNew extends React.Component{
   constructor(props){
@@ -97,43 +97,43 @@ export default class UserNew extends React.Component{
           this.state.current === 'register' 
             ? (
               <form method="post">
-                <StyledInput  
+                <p><StyledInput  
                   type="text" 
                   placeholder="first name" 
                   value={given_name} 
                   onChange={e => this.handleGiven(e.target.value)}
-                />
-                <StyledInput  
+                /></p>
+                <p><StyledInput  
                   type="text" 
                   placeholder="last name" 
                   value={family_name}
                   onChange={e => this.handleFamily(e.target.value)}
-                />
+                /></p>
                 <StyledInput  
                   type="email" 
                   placeholder="email" 
                   value={email}
                   onChange={e => this.handleEmail(e.target.value)}
                 />
-                <StyledInput  
+                <p><StyledInput  
                   type="text" 
                   placeholder="username" 
                   value={username}
                   onChange={e => this.handleUsername(e.target.value)}  
-                />
-                <StyledInput  
+                /></p>
+                <p><StyledInput  
                   type="password" 
                   placeholder="password" 
                   value={password}
                   onChange={e => this.handlePassword(e.target.value)}
-                />
-                <StyledInput  
+                /></p>
+                <p><StyledInput  
                   type="text" 
                   placeholder="zipcode" 
                   value={zip_code}
                   onChange={e => this.handleZip(e.target.value)}
-                />              
-                <button type="submit" onClick={this.handleRegister}>Submit</button>
+                />   </p>           
+                <StyledButton type="submit" onClick={this.handleRegister}>Submit</StyledButton>
               </form>
             ) 
             : (
@@ -150,7 +150,7 @@ export default class UserNew extends React.Component{
                   value={verificationNumber}
                   onChange={e => this.handleVerification(e.target.value)}
                 />              
-                <button type="submit" onClick={this.handleVerify}>Submit</button>
+                <StyledButton type="submit" onClick={this.handleVerify}>Submit</StyledButton>
               </form>              
             )
         }
