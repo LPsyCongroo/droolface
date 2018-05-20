@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import ImageUploader from 'react-images-upload';
 
 import StyledInput from '../styled-components/styledinput'
 import StyledButton from '../styled-components/styledbutton'
@@ -107,6 +106,7 @@ export default class PostNew extends React.Component {
             value={isPrivate}
             onChange={e => this.handlePrivate(e.target.value)}
           /></label>
+<<<<<<< HEAD
           <p>
           <ImageUploader
                 withIcon={true}
@@ -117,6 +117,9 @@ export default class PostNew extends React.Component {
             />
             </p>
           <StyledButton type="submit" onClick={this.handleSubmit}>Submit</StyledButton>
+=======
+          <button type="submit" onClick={this.handleSubmit}>Submit</button>
+>>>>>>> 74c64276f6d1608ea865e875b646b713958fd71c
         </form>   
       </div>
     )
