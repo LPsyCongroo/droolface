@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 export default class PostNew extends React.Component {
   constructor(props){
@@ -9,6 +10,7 @@ export default class PostNew extends React.Component {
       description: '',
       isHomemade: false,
       restaurant: '',
+      isPrivate: false
     }
   }
   
@@ -21,8 +23,39 @@ export default class PostNew extends React.Component {
   handleDescription = (description) => {
     this.setState({ description });
   }
+  handleHomemade = (isHomemade) => {
+    this.setState({ isHomemade });
+  }
+  handleRestaurant = (restaurant) => {
+    this.setState({ restaurant });
+  }
+  handlePrivate = (isPrivate) => {
+    this.setState({ isPrivate });
+  }
+
+  handleSubmit = () => {
+    const {title, dietaryRestriction, description, isHomemade, restaurant, isPrivate} = this.state;
+
+    axios.post('/', { 
+      title, 
+      dietaryRestriction, 
+      description, 
+      isHomemade, 
+      restaurant, 
+      isPrivate 
+    }).then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    
+    this.props.history.push('/');
+  }
 
   render(){
+    const {title, dietaryRestriction, description, isHomemade, restaurant, isPrivate} = this.state;
+    
     return (
       <div>
         <form method="post">
@@ -34,11 +67,35 @@ export default class PostNew extends React.Component {
           />
           <input 
             type="text" 
-            placeholder="diet" 
+            placeholder="Diet" 
             value={dietaryRestriction}
             onChange={e => this.handleDiet(e.target.value)}
-          />              
-          <button type="submit" onClick={this.handleVerify}>Submit</button>
+          />            
+          <input 
+            type="text" 
+            placeholder="Description" 
+            value={description}
+            onChange={e => this.handleDescription(e.target.value)}  
+          />
+          <input 
+            type="checkbox" 
+            placeholder="Homemade?" 
+            value={isHomemade}
+            onChange={e => this.handleHomemade(e.target.value)}
+          />            
+          <input 
+            type="text" 
+            placeholder="restaurant" 
+            value={restaurant}
+            onChange={e => this.handleRestaurant(e.target.value)}  
+          />
+          <input 
+            type="checkbox" 
+            placeholder="Private" 
+            value={isPrivate}
+            onChange={e => this.handlePrivate(e.target.value)}
+          />  
+          <button type="submit" onClick={this.handleSubmit}>Submit</button>
         </form>   
       </div>
     )
