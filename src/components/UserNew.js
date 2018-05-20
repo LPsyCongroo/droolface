@@ -44,11 +44,12 @@ export default class UserNew extends React.Component{
     {
     username: 'rabbitface',
     password: 'duckduckgoosegoose',
-    given_name: 'Jane',
-    family_name: 'Smith',
+    given_name: 'Nitya',
+    family_name: 'Mandyam',
     email: 'duckgoose@gmail.com',
     zip_code: '11001',
     verificationNumber: 123456,
+    profile_pic: 'nitya.jpg'
     }
   ]
 

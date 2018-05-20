@@ -82,7 +82,7 @@ export default class PostNew extends React.Component {
       tags: ['#Eating Clean','#No Regrets']
       restaurant: '',
       isPrivate: false,
-      photo: 'bareburger.jpg'
+      photo: 'taco_salad.jpg'
     }
   ]
   render(){
